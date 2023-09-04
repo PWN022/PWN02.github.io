@@ -41,7 +41,7 @@ social:
     #- https://twitter.com/vszhub
     - https://github.com/PWN022
 google_site_verification: xxxxx
-lang: en
+lang: zh-CN
 
 sass:
   sass_dir: _sass
