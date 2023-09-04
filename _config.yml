@@ -1,6 +1,6 @@
 # Setup
 title: PWN022
-description: A simple, beautiful, and powerful Jekyll theme for blogs
+description: PWNNN.fun
 url: https://PWN022.github.io
 avatar: /avatar.jpeg
 paginate: 5
@@ -39,7 +39,7 @@ social:
   name: PWN022
   links:
     #- https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://github.com/PWN022
 google_site_verification: xxxxx
 lang: en
 
