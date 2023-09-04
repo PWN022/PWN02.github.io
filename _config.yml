@@ -1,5 +1,5 @@
 # Setup
-title: Not Pure Poole
+title: PWN022
 description: A simple, beautiful, and powerful Jekyll theme for blogs
 url: https://PWN022.github.io
 avatar: /avatar.jpeg
@@ -31,14 +31,14 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
-logo: logo.png
+#twitter:
+  #username: vszhub
+  #card: summary
+#logo: logo.png
 social:
-  name: Songzi Vong
+  name: PWN022
   links:
-    - https://twitter.com/vszhub
+    #- https://twitter.com/vszhub
     - https://github.com/vszhub
 google_site_verification: xxxxx
 lang: en
@@ -57,6 +57,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: PWN022
+  url: https://github.com/PWN022/
+  email: owoshadow@gmail.com
