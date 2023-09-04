@@ -6,7 +6,9 @@ tags:
 - test
 date: 2020-9-04 23:24 +0800
 ---
+
 /**
+
 ---
 layout: post
 title: Welcome to Not Pure Poole
@@ -15,6 +17,7 @@ last_modified_at: 2020-10-01 01:08:25 +0800
 tags: [jekyll theme, jekyll, tutorial]
 toc:  true
 ---
+
 **/
 
 hi,this is a blog post.
