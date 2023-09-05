@@ -18,7 +18,7 @@
 <script language="javascript"> 
   var now = new Date();
   function createtime(){
-  var grt= new Date("08/05/2023 00:00:00");/*---这里是网站的启用时间--*/
+  var grt= new Date("09/04/2023 00:00:00");/*---这里是网站的启用时间--*/
   now.setTime(now.getTime()+250);
   days = (now - grt ) / 1000 / 60 / 60 / 24;
   dnum = Math.floor(days);
@@ -31,8 +31,8 @@
   seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
   snum = Math.round(seconds);
   if(String(snum).length ==1 ){snum = "0" + snum;}
-  document.getElementById("timeDate").innerHTML = "Run For"+dnum+"days";
-  document.getElementById("times").innerHTML = hnum + "hours" + mnum + "minutes" + snum + "seconds";
+  document.getElementById("timeDate").innerHTML = "Run For "+dnum+" days ";
+  document.getElementById("times").innerHTML = hnum + " hours " + mnum + " minutes " + snum + " seconds ";
  }
  setInterval("createtime()",250); 
 </script>
