@@ -14,14 +14,14 @@ toc:  true
 
 ## 8086总线周期及引脚功能
 
-#### 8086CPU的引脚功能
+### 8086CPU的引脚功能
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-19%2011.21.26.png" alt="截屏2023-08-15 11.21.50" style="zoom: 33%;" />
 
 8086CPU是16位的微处理器，向外的信号包含**16条数据线**，**20条地址线**。
 为了减少芯片引脚数量，采用了**分时复用**的方式，在同一根传输线上，在不同时间传送不同的信息（可能是数据信息，也可能是地址信息）。
 
-##### 8086总线周期
+### 8086总线周期
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-22%2011.17.13.png" alt="截屏2023-08-22 11.17.13" style="zoom:33%;" />
 
@@ -34,7 +34,7 @@ toc:  true
 
 总线周期一般是**4个时钟周期**。
 
-###### 总线周期的四个状态
+#### 总线周期的四个状态
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-22%2011.31.42.png" alt="截屏2023-08-22 11.31.42" style="zoom:33%;" />
 
@@ -52,11 +52,11 @@ T3状态：读写数据，如果与外设交换数据时，外设响应较慢，
 T4状态：总线周期结束，若为总线读周期则在T4前沿将数据读入CPU。
 TI状态：总线空闲周期。
 
-#### 8086/8088引脚图解
+### 8086/8088引脚图解
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E5%BC%95%E8%84%9A.jpeg" alt="引脚" style="zoom: 33%;" />
 
-#### 8086/8088工作模式
+### 8086/8088工作模式
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-26%2010.52.02.png" alt="截屏2023-08-26 10.52.02" style="zoom:33%;" />
 
@@ -65,8 +65,8 @@ TI状态：总线空闲周期。
 传输有三种类型：输出、输入、双向（可输入和输出）
 三态：可以通过一个大的电阻阻断内外信号的传送。CPU内部的状态与外部相互隔离，“悬浮态”。
 
-数字逻辑电路：<a href="https://www.bilibili.com/video/BV1H54y1k7kM/">https://www.bilibili.com/video/BV1H54y1k7kM</a><br/>
-数字电子技术：<a href="https://www.bilibili.com/video/BV1Vx411s7CE/">https://www.bilibili.com/video/BV1Vx411s7CE</a>
+数字逻辑电路：https://www.bilibili.com/video/BV1H54y1k7kM/
+数字电子技术：https://www.bilibili.com/video/BV1Vx411s7CE/
 
 > <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot 2023-08-28 at 10.43.24.png" alt="Screenshot 2023-08-28 at 10.43.24" style="zoom:33%;" />
 >
@@ -112,7 +112,7 @@ TI状态：总线空闲周期。
 
 ## 8086的存储器及I/O组织
 
-#### 8086存储器的结构
+### 8086存储器的结构
 
 > <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-08-29%20at%2010.58.06.png" alt="Screenshot 2023-08-29 at 10.58.06" style="zoom: 33%;" />
 >
@@ -155,7 +155,7 @@ A~0~：地址总线的最低位：**A~0~=1为奇**，**A~0~=0为偶**。
 >
 > 做题妙招：BHE非 高8位，A~0~ 低8位；谁为0谁有效
 
-##### 8086系统内存地址-专用区域
+#### 8086系统内存地址-专用区域
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2010.53.53.png" alt="Screenshot 2023-09-01 at 10.53.53" style="zoom:33%;" />
 
@@ -165,19 +165,18 @@ RESET后，总是让cs=0FFFFH，其余都是0，所以物理地址=cs*16+IP=0FFF
 
 中断向量表00000～003FFH一共有1KB，每个中断需要占用4个字节，所以可存储**1KB/4字节**，**256**个中断服务程序的入口地址。
 
-#### 8086 I/O组织
+### 8086 I/O组织
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.33.54.png" alt="Screenshot 2023-09-01 at 11.33.54" style="zoom:33%;" />
 
 因为有M/IO非，所以I/O端口与内存分别独立编址，I/O端口使用16位地址，可寻址空间为64KB。
 内存有20根线，可寻址空间为1MB。https://blog.csdn.net/u012076669/article/details/79764921
 
-#### 8086系统配置
+### 8086系统配置
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.44.04.png" alt="Screenshot 2023-09-01 at 11.44.04" style="zoom:33%;" />
 
-> <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.49.00.png" alt="Screenshot 2023-09-01 at 11.49.00" style="zoom: 25%;" /><br/>
-<img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.54.53.png" alt="Screenshot 2023-09-01 at 11.54.53" style="zoom:25%;" />
+> <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.49.00.png" alt="Screenshot 2023-09-01 at 11.49.00" style="zoom: 25%;" /><img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.54.53.png" alt="Screenshot 2023-09-01 at 11.54.53" style="zoom:25%;" />
 >
 > 3片地址锁存器8282：8入8出，因为有20根地址线，所以需要3片地址锁存器。
 
@@ -187,15 +186,15 @@ RESET后，总是让cs=0FFFFH，其余都是0，所以物理地址=cs*16+IP=0FFF
 
 最大模式：可以**有一个以上的处理器**，除了8086/8088还有**8087数值协处理器**和**8089I/O协处理器**等。（仅作了解）
 
-##### 最小系统模式
+#### 最小系统模式
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.00.04.png" alt="Screenshot 2023-09-02 at 11.00.04" style="zoom:33%;" />
 
 通过8282（锁存器）变成A~19~～A~0~地址线；通过8286变成D~7~～D~0~或D~15~～D~8~数据线。
 
-##### 最小模式下的系统控制信号
+#### 最小模式下的系统控制信号
 
-###### **读写控制信号引脚**
+#### **读写控制信号引脚**
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.05.25.png" alt="Screenshot 2023-09-02 at 11.05.25" style="zoom:33%;" />
 
@@ -215,7 +214,7 @@ ALE：地址锁存允许信号，高电平有效。
 DEN非：数据允许信号，三态输出，传送地址时候DEN非为1，传送数据时DEN非为0(有效)。
 DT/R非：区分数据传送的方向，三态输出，为高电平时(DT)表示为数据发送，为低电平(R非)表示为数据接收。 （也是读写信号）
 
-###### 中断控制信号引脚
+#### 中断控制信号引脚
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.25.12.png" alt="Screenshot 2023-09-02 at 11.25.12" style="zoom:33%;" />
 
@@ -229,16 +228,17 @@ DMA：传输不经过CPU，在**内存**和**I/O设备**之间**直接**传输�
 HOLD：总线请求信号。输入，表示有其他设备向CPU请求使用总线。
 HLDA：总线请求响应信号。输出。
 
-###### 总结
+#### 总结
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.37.22.png" alt="Screenshot 2023-09-02 at 11.37.22" style="zoom:33%;" />
 
-### 8086CPU的工作时序
+## 8086CPU的工作时序
 
-#### 最小模式下的总线读周期
+### 最小模式下的总线读周期
 
 ![Screenshot 2023-09-02 at 11.47.05](https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.47.05.png)
 
 ![Screenshot 2023-09-02 at 11.49.33](https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.49.33.png)
 
 **8086的总线操作顺序**：https://blog.csdn.net/xiong_xin/article/details/100586833
+
