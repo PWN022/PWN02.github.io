@@ -33,13 +33,13 @@ layout: default
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Previous Page</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Next Page</a>
   {% else %}
-    <span class="pagination-item older">Previous Page</span>
+    <span class="pagination-item older">Next Page</span>
   {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Next Page</a>
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Previous Page</a>
   {% else %}
-    <span class="pagination-item newer">Next Page</span>
+    <span class="pagination-item newer">Previous Page</span>
   {% endif %}
 </div>
