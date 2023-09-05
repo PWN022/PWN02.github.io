@@ -1,17 +1,41 @@
+<main>
+  {{ content }}
+</main>
 
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-  <head>
-    <title>503 first byte timeout</title>
-  </head>
-  <body>
-    <h1>Error 503 first byte timeout</h1>
-    <p>first byte timeout</p>
-    <h3>Error 54113</h3>
-    <p>Details: cache-qpg1263-QPG 1693887806 1456875160</p>
-    <hr>
-    <p>Varnish cache server</p>
-  </body>
-</html>
+<footer class="footer">
+  {%- assign year_from = site.posts[-1].date | date: '%Y' -%}
+  {%- assign year_to   = site.time | date: '%Y' -%}
+  {%- if year_from == nil or year_from == year_to -%}
+    {%- assign year_string = year_from -%}
+  {%- else -%}
+    {%- assign year_string = year_from | append: '&nbsp;' | append: '-' | append: '&nbsp;' | append: year_to -%}
+  {%- endif -%}
+  <small class="dibu">
+    &copy; {{ year_string }} {% if site.author %}<a href="{{ site.author.url }}">{{ site.author.name }}</a>{% endif %}. All rights reserved.
+  </small>
+<br />
+  
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> 
+<script language="javascript"> 
+  var now = new Date();
+  function createtime(){
+  var grt= new Date("09/04/2023 00:00:00");/*---这里是网站的启用时间--*/
+  now.setTime(now.getTime()+250);
+  days = (now - grt ) / 1000 / 60 / 60 / 24;
+  dnum = Math.floor(days);
+  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+  hnum = Math.floor(hours);
+  if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+  minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+  mnum = Math.floor(minutes);
+  if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+  snum = Math.round(seconds);
+  if(String(snum).length ==1 ){snum = "0" + snum;}
+  document.getElementById("timeDate").innerHTML = "Run For "+dnum+" days ";
+  document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " s ";
+ }
+ setInterval("createtime()",250); 
+</script>
+  
+</footer>
