@@ -1,3 +1,13 @@
+---
+layout: post
+title: mc-chapter two-02
+author: PWN022
+tags:
+- mc-principle
+date: 2023-09-05 10:37 +0800
+toc:  true
+---
+
 # 微机原理
 
 # 第二章
