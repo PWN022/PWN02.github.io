@@ -1,3 +1,13 @@
+---
+layout: post
+title: mc-chapter one
+author: PWN022
+tags:
+- mc-principle
+date: 2023-09-05 10:34 +0800
+toc:  true
+---
+
 # 微机原理
 
 # 第一章
