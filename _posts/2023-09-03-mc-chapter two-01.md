@@ -39,10 +39,13 @@ toc:  true
 四个通用寄存器，即AX、BX、CX、DX；(都有第二功能,一般是用来计算 )
 四个专用寄存器，即基址指针寄存器 BP(base pointer)、堆栈指针寄存器 SP(stack pointer)、源变址寄存器 SI(source index)、
 目的变址寄存器 DI(destination index)（BP寄存器与SP寄存器指针不一样，BP可以用来寻址）
+
 2.
 标志寄存器 FR（用来检测有无溢出，标志位，（别名：PSW、程序状态字、状态寄存器））
+
 3.
 算术逻辑单元 ALU(arithmetic logic unit)（完成计算）
+
 4.
 内部控制逻辑
 
@@ -58,8 +61,7 @@ toc:  true
 
 - 数据寄存器（AX，BX，CX，DX）（可以分开来用，两个8位是独立的）（只对AL操作时如果溢出则不会进位给AH）
   （地址一般指的是偏移地址都是16位 ）
-  AX=AH+AL，AX的高8位为AH寄存器，H=high
-  BX=BH+BL、CX=CH+CL、DX=DH+DL
+  AX=AH+AL，AX的高8位为AH寄存器，H=high，BX=BH+BL、CX=CH+CL、DX=DH+DL。
 - 指针和变址寄存器（SP，BP，SI，DI）（除了SP其他都可以作通用寄存器） 
 
 ### 数据寄存器的第二功能
