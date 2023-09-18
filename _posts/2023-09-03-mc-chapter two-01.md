@@ -58,7 +58,8 @@ toc:  true
 
 - 数据寄存器（AX，BX，CX，DX）（可以分开来用，两个8位是独立的）（只对AL操作时如果溢出则不会进位给AH）
   （地址一般指的是偏移地址都是16位 ）
-  AX=AH+AL，AX的高8位为AH寄存器，H=high  BX=BH+BL、CX=CH+CL、DX=DH+DL
+  AX=AH+AL，AX的高8位为AH寄存器，H=high
+  BX=BH+BL、CX=CH+CL、DX=DH+DL
 - 指针和变址寄存器（SP，BP，SI，DI）（除了SP其他都可以作通用寄存器） 
 
 ### 数据寄存器的第二功能
