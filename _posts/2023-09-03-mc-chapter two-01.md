@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter two-01
+title: mc-chapter two-EU BIU
 author: PWN022
 tags:
 - mc-principle
