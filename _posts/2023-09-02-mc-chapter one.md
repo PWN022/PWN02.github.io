@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter one
+title: mc-chapter one-门电路以及基础
 author: PWN022
 tags:
 - mc-principle
