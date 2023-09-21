@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter two-EU BIU
+title: mc-chapter two-EU和BIU部件
 author: PWN022
 tags:
 - mc-principle
