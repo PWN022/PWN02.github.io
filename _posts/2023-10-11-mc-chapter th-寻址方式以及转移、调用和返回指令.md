@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter th-寻址方式和转移、调用、返回指令
+title: mc-chapter th-寻址方式和转移类指令1
 author: PWN022
 tags:
 - mc-principle
