@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter th-乘除法指令
+title: 微机原理 th-乘除法指令
 author: PWN022
 tags:
 - mc-principle
