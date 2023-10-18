@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter th-寻址方式以及转移类指令2
+title: 微机原理 th-寻址方式以及转移类指令2
 author: PWN022
 tags:
 - mc-principle
