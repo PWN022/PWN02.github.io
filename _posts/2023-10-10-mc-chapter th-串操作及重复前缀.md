@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter th-串操作及重复前缀
+title: 微机原理 th-串操作及重复前缀
 author: PWN022
 tags:
 - mc-principle
