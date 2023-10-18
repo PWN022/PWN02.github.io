@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter th-逻辑运算指令
+title: 微机原理 th-逻辑运算指令
 author: PWN022
 tags:
 - mc-principle
