@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter th-寻址方式
+title: 微机原理 th-寻址方式
 author: PWN022
 tags:
 - mc-principle
