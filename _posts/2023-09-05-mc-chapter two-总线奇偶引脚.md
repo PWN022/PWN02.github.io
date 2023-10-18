@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mc-chapter two-总线、奇偶地址体、引脚功能
+title: 微机原理 two-总线、奇偶地址体、引脚功能
 author: PWN022
 tags:
 - mc-principle
