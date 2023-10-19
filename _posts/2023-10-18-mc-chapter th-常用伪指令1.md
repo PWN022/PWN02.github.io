@@ -121,8 +121,7 @@ DD—双字(4字节)
    （2）THIS运算符（不咋重要）  
    格式：THIS 类型  
    功能：把它后面指定的类型或距离属性赋给当前的变量、标号或地址表达式。
-
-例：A EQU THIS BYTE；B DW 20 DUP；变量A为字节访问，变量B为字访问，段地址和偏移地址是相同的。
+   例：A EQU THIS BYTE；B DW 20 DUP；变量A为字节访问，变量B为字访问，段地址和偏移地址是相同的。
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-10-18%2017.17.01.png" alt="截屏2023-10-18 17.17.01" style="zoom:33%;" />
 
