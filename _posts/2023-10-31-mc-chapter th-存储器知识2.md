@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 微机原理 th-存储器基本知识及存储器系统
+title: 微机原理 f-存储器基本知识及存储器系统
 author: PWN022
 tags:
 - mc-principle
@@ -10,7 +10,7 @@ toc:  true
 
 # 微机原理
 
-# 第三章
+# 第四章
 
 ## 随机读写存储器
 
@@ -99,9 +99,10 @@ CE1非为0，CE2为1时，芯片才被选中。
 
 2. 字对齐
 
-<img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-10-31%2017.26.44.png" alt="截屏2023-10-31 17.26.44" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-10-31%2017.28.26.png" alt="截屏2023-10-31 17.26.44" style="zoom:33%;" />
 
 3. ​	位、字对齐<img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-10-31%2017.30.45.png" alt="截屏2023-10-31 17.30.45" style="zoom:33%;" />
+
 4. 例
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-10-31%2017.38.10.png" alt="截屏2023-10-31 17.38.10" style="zoom:33%;" />
