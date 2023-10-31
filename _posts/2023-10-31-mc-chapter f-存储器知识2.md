@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 微机原理 f-存储器基本知识及存储器系统
+title: 微机原理 f4-存储器基本知识及存储器系统
 author: PWN022
 tags:
 - mc-principle
