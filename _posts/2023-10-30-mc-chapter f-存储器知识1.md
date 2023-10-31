@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 微机原理 th-存储器基本知识
+title: 微机原理 t-存储器基本知识
 author: PWN022
 tags:
 - mc-principle
