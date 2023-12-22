@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 微机原理 two-总线、奇偶地址体、引脚功能
+title: 微机原理 t2-总线、奇偶地址体、引脚功能
 author: PWN022
 tags:
 - mc-principle
@@ -18,14 +18,14 @@ toc:  true
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-19%2011.21.26.png" alt="截屏2023-08-15 11.21.50" style="zoom: 33%;" />
 
-8086CPU是16位的微处理器，向外的信号包含**16条数据线**，**20条地址线**。
+8086CPU是16位的微处理器，向外的信号包含**16条数据线**，**20条地址线**。  
 为了减少芯片引脚数量，采用了**分时复用**的方式，在同一根传输线上，在不同时间传送不同的信息（可能是数据信息，也可能是地址信息）。
 
 ### 8086总线周期
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-22%2011.17.13.png" alt="截屏2023-08-22 11.17.13" style="zoom:33%;" />
 
-时钟周期：时钟周期的倒数就是主频，**主频分之一就是时钟周期**，**最小**时间单位。
+时钟周期：时钟周期的倒数就是主频，**主频分之一就是时钟周期**，**最小**时间单位。  
 总线周期：CPU通过外部**总线**对存储器或I/O端口进行一次**读/写操作**的过程称为总线周期。
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-22%2011.28.30.png" alt="截屏2023-08-22 11.28.30" style="zoom:33%;" />
@@ -38,18 +38,18 @@ toc:  true
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-22%2011.31.42.png" alt="截屏2023-08-22 11.31.42" style="zoom:33%;" />
 
-T1状态：CPU发送地址信息（A19-A0），并给锁存器发出控制信号（ALE），锁存器锁存地址。
-T2状态(准备阶段)：从总线上撤销地址（因为已经发送给了锁存器），（分时复用）总线高4位（A19-A16）输出总线周期的状态信息。
-								**总线低16位是 地址信息/数据信息；总线高4位是地址信息/状态信息。**
+T1状态：CPU发送地址信息（A19-A0），并给锁存器发出控制信号（ALE），锁存器锁存地址。  
+T2状态(准备阶段)：从总线上撤销地址（因为已经发送给了锁存器），（分时复用）总线高4位（A19-A16）输出总线周期的状态信息  
+**总线低16位是 地址信息/数据信息；总线高4位是地址信息/状态信息。**
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-25%2010.48.17.png" alt="截屏2023-08-25 10.48.17" style="zoom:33%;" />
 
-T3状态：读写数据，如果与外设交换数据时，外设响应较慢，则通过CPU的READY信号，申请插入**等待状态Tw**，在**T3和T4之间**。
-																				**READY=1不插入等待状态，READY=0插入等待状态。**
+T3状态：读写数据，如果与外设交换数据时，外设响应较慢，则通过CPU的READY信号，申请插入**等待状态Tw**，在**T3和T4之间**。  
+**READY=1不插入等待状态，READY=0插入等待状态。**
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/%E6%88%AA%E5%B1%8F2023-08-25%2010.57.14.png" alt="截屏2023-08-25 10.57.14" style="zoom:33%;" />
 
-T4状态：总线周期结束，若为总线读周期则在T4前沿将数据读入CPU。
+T4状态：总线周期结束，若为总线读周期则在T4前沿将数据读入CPU。  
 TI状态：总线空闲周期。
 
 ### 8086/8088引脚图解
@@ -62,10 +62,10 @@ TI状态：总线空闲周期。
 
 8086/8088CPU有两种不同的工作模式（**最小模式**和最大模式）
 
-传输有三种类型：输出、输入、双向（可输入和输出）
+传输有三种类型：输出、输入、双向（可输入和输出）  
 三态：可以通过一个大的电阻阻断内外信号的传送。CPU内部的状态与外部相互隔离，“悬浮态”。
 
-数字逻辑电路：https://www.bilibili.com/video/BV1H54y1k7kM/
+数字逻辑电路：https://www.bilibili.com/video/BV1H54y1k7kM/  
 数字电子技术：https://www.bilibili.com/video/BV1Vx411s7CE/
 
 > <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot 2023-08-28 at 10.43.24.png" alt="Screenshot 2023-08-28 at 10.43.24" style="zoom:33%;" />
@@ -74,14 +74,12 @@ TI状态：总线空闲周期。
 
 > <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-08-28%20at%2010.48.29.png" alt="Screenshot 2023-08-28 at 10.48.29" style="zoom:33%;" />
 >
-> BHE非，高八位数据总线允许/状态复用引脚（输出，三态，低电平有效）
->
+> BHE非，高八位数据总线允许/状态复用引脚（输出，三态，低电平有效）  
 > 8086CPU有16根数据线；分奇地址体和偶地址体。
 
 > <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-08-28%20at%2010.58.57.png" alt="Screenshot 2023-08-28 at 10.58.57" style="zoom:33%;" />
 >
-> NMI**非屏蔽**中断引脚（输入），边沿触发，不受终端允许标志IF的影响且是唯一的。
->
+> NMI**非屏蔽**中断引脚（输入），边沿触发，不受终端允许标志IF的影响且是唯一的。  
 > INTR**可屏蔽**中断请求信号（输入），电平触发，高电平有效，受IF影响，不唯一。
 >
 > 可以理解为NMI>INTR 
@@ -145,9 +143,9 @@ A~0~：地址总线的最低位：**A~0~=1为奇**，**A~0~=0为偶**。
 
 （3）从偶地址读写一个字 16位所以需要高8位所以BHE非=0，A~0~=0；BHE非 A~0~=00
 
-（4）从奇地址读写一个字 占用两个总线周期，先拿奇地址又拿偶地址拼成
-	1.第一个总线周期 BHE非=0，A~0~=1 （从偶地址开始只能读到奇地址的低8位）
-	2.第二个总线周期 BHE非=1，A~0~=0 （从偶地址读）
+（4）从奇地址读写一个字 占用两个总线周期，先拿奇地址又拿偶地址拼成  
+		1.第一个总线周期 BHE非=0，A~0~=1 （从偶地址开始只能读到奇地址的低8位）  
+		2.第二个总线周期 BHE非=1，A~0~=0 （从偶地址读）
 
 > <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-08-31%20at%2011.55.37.png" alt="Screenshot 2023-08-31 at 11.55.37" style="zoom: 50%;" />
 >
@@ -169,7 +167,7 @@ RESET后，总是让cs=0FFFFH，其余都是0，所以物理地址=cs*16+IP=0FFF
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-01%20at%2011.33.54.png" alt="Screenshot 2023-09-01 at 11.33.54" style="zoom:33%;" />
 
-因为有M/IO非，所以I/O端口与内存分别独立编址，I/O端口使用16位地址，可寻址空间为64KB。
+因为有M/IO非，所以I/O端口与内存分别独立编址，I/O端口使用16位地址，可寻址空间为64KB。  
 内存有20根线，可寻址空间为1MB。https://blog.csdn.net/u012076669/article/details/79764921
 
 ### 8086系统配置
@@ -202,30 +200,30 @@ M/IO非：三态输出。M为1表示当前CPU正在访问存储器，IO非为0�
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.11.18.png" alt="Screenshot 2023-09-02 at 11.11.18" style="zoom: 33%;" />
 
-M/IO非和WR非、RD非决定系统中数据传输的方向，M/IO非区分是向存储器读/写或者向I/O端口读/写。
-RD非：读信号，三态输出。
-WR非：写信号，三态输出。
-READY：准备就绪信号。
+M/IO非和WR非、RD非决定系统中数据传输的方向，M/IO非区分是向存储器读/写或者向I/O端口读/写。  
+RD非：读信号，三态输出。  
+WR非：写信号，三态输出。  
+READY：准备就绪信号。  
 BHE/S~7~：总线高字节有效信号，三态输出。
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.14.35.png" alt="Screenshot 2023-09-02 at 11.14.35" style="zoom:33%;" />
 
-ALE：地址锁存允许信号，高电平有效。
-DEN非：数据允许信号，三态输出，传送地址时候DEN非为1，传送数据时DEN非为0(有效)。
+ALE：地址锁存允许信号，高电平有效。  
+DEN非：数据允许信号，三态输出，传送地址时候DEN非为1，传送数据时DEN非为0(有效)。  
 DT/R非：区分数据传送的方向，三态输出，为高电平时(DT)表示为数据发送，为低电平(R非)表示为数据接收。 （也是读写信号）
 
 #### 中断控制信号引脚
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.25.12.png" alt="Screenshot 2023-09-02 at 11.25.12" style="zoom:33%;" />
 
-INTR：可屏蔽中断请求信号。
-INTA非：中断响应信号，三态，向外输出信息。1.通知外设。2.要求申请中断的设备向CPU发送中断类型。
+INTR：可屏蔽中断请求信号。  
+INTA非：中断响应信号，三态，向外输出信息。1.通知外设。2.要求申请中断的设备向CPU发送中断类型。  
 NMI：不可屏蔽中断请求信号。
 
 <img src="https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.29.26.png" alt="Screenshot 2023-09-02 at 11.29.26" style="zoom:33%;" />
 
-DMA：传输不经过CPU，在**内存**和**I/O设备**之间**直接**传输数据，进行DMA传输之前要向CPU申请使用总线并取得认可。
-HOLD：总线请求信号。输入，表示有其他设备向CPU请求使用总线。
+DMA：传输不经过CPU，在**内存**和**I/O设备**之间**直接**传输数据，进行DMA传输之前要向CPU申请使用总线并取得认可。  
+HOLD：总线请求信号。输入，表示有其他设备向CPU请求使用总线。  
 HLDA：总线请求响应信号。输出。
 
 #### 总结
@@ -241,4 +239,3 @@ HLDA：总线请求响应信号。输出。
 ![Screenshot 2023-09-02 at 11.49.33](https://cdn.jsdelivr.net/gh/PWN022/POFMC/my_screenshot/Screenshot%202023-09-02%20at%2011.49.33.png)
 
 **8086的总线操作顺序**：https://blog.csdn.net/xiong_xin/article/details/100586833
-
