@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2024-02-05记录
+title: 2024-02-05
 author: PWN022
 tags:
 - daily
