@@ -6,7 +6,6 @@ tags:
 - wa
 date: 2025-10-03 14:05 +0800
 toc:  true
-
 ---
 
 # 搭建靶场（CentOS7）
@@ -135,6 +134,7 @@ ifconfig #查看IP
 
 
 之后在浏览器输入：**虚拟机的ip/pikachu**就可以访问到搭建的pikachu靶场。
+
 
 
 
