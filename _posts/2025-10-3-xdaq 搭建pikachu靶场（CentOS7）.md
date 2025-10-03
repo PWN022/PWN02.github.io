@@ -1,3 +1,14 @@
+---
+layout: post
+title: 2025-10-03
+author: PWN022
+tags:
+- xdaq
+date: 2025-10-03 14:05 +0800
+toc:  true
+
+---
+
 # Linux搭建pikachu靶场（CentOS7）
 
 pikachu是一个带有漏洞的Web应用系统，里面包含了几种常见的web安全漏洞可供小白实践操作。
@@ -121,5 +132,6 @@ sudo systemctl stop firewalld #关闭防火墙
 sudo systemctl disable firewalld#关闭防火墙自启动
 ifconfig #查看IP
 ```
+
 
 之后在浏览器输入：**虚拟机的ip/pikachu**就可以访问到搭建的pikachu靶场。
