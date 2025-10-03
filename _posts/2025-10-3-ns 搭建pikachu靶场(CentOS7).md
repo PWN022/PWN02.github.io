@@ -9,10 +9,6 @@ toc:  true
 
 ---
 
-# Linux搭建pikachu靶场（CentOS7）
-
----
-
 pikachu是一个带有漏洞的Web应用系统，里面包含了几种常见的web安全漏洞可供小白实践操作。
 
 ## 环境准备
@@ -136,3 +132,4 @@ ifconfig #查看IP
 ```
 
 之后在浏览器输入：**虚拟机的ip/pikachu**就可以访问到搭建的pikachu靶场。
+
