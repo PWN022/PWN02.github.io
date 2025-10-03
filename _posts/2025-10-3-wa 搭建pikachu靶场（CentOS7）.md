@@ -9,7 +9,6 @@ toc:  true
 
 ---
 
-<!--more-->
 
 # 搭建靶场（CentOS7）
 
@@ -137,6 +136,7 @@ ifconfig #查看IP
 
 
 之后在浏览器输入：**虚拟机的ip/pikachu**就可以访问到搭建的pikachu靶场。
+
 
 
 
