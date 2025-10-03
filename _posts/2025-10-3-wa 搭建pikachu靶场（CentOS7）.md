@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 2025-10-03
+title: Linux搭建pikachu靶场（CentOS7）
 author: PWN022
 tags:
-- xdaq
+- wa
 date: 2025-10-03 14:05 +0800
 toc:  true
 
@@ -135,3 +135,4 @@ ifconfig #查看IP
 
 
 之后在浏览器输入：**虚拟机的ip/pikachu**就可以访问到搭建的pikachu靶场。
+
