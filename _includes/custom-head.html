@@ -1,6 +1,12 @@
-<link rel="icon" type="image/png" href="_images/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="_images//favicon.svg" />
-<link rel="shortcut icon" href="_images/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="_images/apple-touch-icon.png" />
+{% comment %}
+  Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+
+  1. Head over to https://realfavicongenerator.net/   to add your own favicons.
+  2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
+{% endcomment %}
+<link rel="icon" type="image/png" href="{{ '/images/favicon-96x96.png' | relative_url }}" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}" />
+<link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | relative_url }}" />
 <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="_images/site.webmanifest" />
+<link rel="manifest" href="{{ '/images/site.webmanifest' | relative_url }}" />
