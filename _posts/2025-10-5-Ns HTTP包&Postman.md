@@ -3,7 +3,7 @@ layout: post
 title: HTTP包构成结构
 author: PWN022
 tags:
-- Network security
+- 基础入门
 date: 2025-10-06 00:19 +0800
 toc:  true
 excerpt: ""
@@ -111,3 +111,4 @@ excerpt: ""
 # POSTMAN
 
 发包工具，不多作介绍，详细操作可以直接搜相关内容，这里不做演示。
+
