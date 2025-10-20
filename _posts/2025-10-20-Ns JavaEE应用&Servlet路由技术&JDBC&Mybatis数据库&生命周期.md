@@ -68,7 +68,18 @@ Java:
 
 框架库:MyBatis,SpringMVC,SpringBoot,Shiro , Log4j ,FastJson等技术:Servlet,Listen,Filter,Interceptor,JWT，AOP，待补充。
 
-  //接受用户输入的 变量字符串s接受        Scanner sc = new Scanner(System.in);        System.out.print("Enter the id:");        String s = sc.nextLine();//        System.out.println(s);​        // 不安全的写法        String query = "select * from user where id="+s;        Statement statement = connection.createStatement();        ResultSet resultSet = statement.executeQuery(query);        System.out.println(resultSet);java
+```java
+//接受用户输入的 变量字符串s接受
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter the id:");
+String s = sc.nextLine();
+System.out.println(s);
+// 不安全的写法
+String query = "select * from user where id="+s;
+Statement statement = connection.createStatement();
+ResultSet resultSet = statement.executeQuery(query);
+System.out.println(resultSet);
+```
 
 JavaEE-HTTP-Servlet&路由&周期:
 
@@ -452,3 +463,4 @@ req的使用（需要调用service等），req的使用需要httpservlet的调�
    效果图展示：
 
    ![image-20251020174925491](https://cdn.jsdelivr.net/gh/PWN022/0x00@main/NetSecurity/My_screenshot/image-20251020174925491.png)
+
