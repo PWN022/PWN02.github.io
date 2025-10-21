@@ -345,12 +345,6 @@ public class AdminFilter implements Filter {
 ![](https://cdn.jsdelivr.net/gh/PWN022/0x00@main/NetSecurity/My_screenshot/33-10.png)
 ![](https://cdn.jsdelivr.net/gh/PWN022/0x00@main/NetSecurity/My_screenshot/33-11.png)
 
-我这里是连接成功了，没有后续图片是因为踩过滤器的时候出现了错误，估计是因为tomcat版本的问题，要不就是降级版本到9.x。另外一种方法就是去抓FilterShell的包，把包内的旧类名javax需要替换成新类名jakarta就可以查看过滤器。
-
-所以，之后的就参考：https://blog.csdn.net/m0_74930529/article/details/140638420，其实后面也没什么内容了，就是添加了一个后门用来监听。
-
-
-
 #### 总结
 
 内存马是写在Filter中。
@@ -465,5 +459,6 @@ public class ListenerSession implements HttpSessionListener {
     }
 }
 ```
+
 
 
